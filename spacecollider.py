@@ -12,12 +12,12 @@ window = pygame.display.set_mode((window_width, window_height))
 pygame.display.set_caption("Space Collider")
 
 #load bg image and scale it
-background1 = pygame.image.load("space/spacebg.jpg").convert()
+background1 = pygame.image.load("spacebg.jpg").convert()
 background1 = pygame.transform.scale(background1, (window_width, window_height))
 background2 = pygame.transform.scale(background1, (window_width, window_height))
 
 #load spaceship
-spaceship_img = pygame.image.load("space/spaceship-removebg-preview.png").convert_alpha()
+spaceship_img = pygame.image.load("spaceship-removebg-preview.png").convert_alpha()
 spaceship_width, spaceship_height = spaceship_img.get_size()
 spaceship_scale = 0.15
 spaceship_img = pygame.transform.scale(spaceship_img, (int(spaceship_width * spaceship_scale), int(spaceship_height * spaceship_scale)))
@@ -44,7 +44,7 @@ class Asteroid:
         window.blit(self.image, (self.x, self.y))
 
 
-asteroid_img = pygame.image.load("space/asteroid-removebg-preview.png").convert_alpha()
+asteroid_img = pygame.image.load("asteroid-removebg-preview.png").convert_alpha()
 asteroid_width, asteroid_height = asteroid_img.get_size()
 
 max_asteroid_scale = 0.15
